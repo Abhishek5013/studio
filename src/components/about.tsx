@@ -20,7 +20,7 @@ const About = () => {
                 <h2 className="text-4xl md:text-5xl font-headline font-bold text-center mb-12">About Me</h2>
                 <div className="grid md:grid-cols-5 gap-12 items-center">
                     <div className="md:col-span-2 flex justify-center">
-                         <Card className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-card/50 backdrop-blur-sm">
+                         <Card className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-white/20 backdrop-blur-lg border border-white/30">
                             <CardContent className="p-0">
                                 <Image
                                     src="https://placehold.co/400x400.png"

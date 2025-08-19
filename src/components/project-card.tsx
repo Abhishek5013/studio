@@ -14,7 +14,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ title, description, imageUrl, aiHint, projectUrl }: ProjectCardProps) => {
     return (
-        <Card className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col bg-card/50 backdrop-blur-sm">
+        <Card className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white/20 backdrop-blur-lg border border-white/30">
             <CardHeader className="p-0">
                 <div className="overflow-hidden">
                     <Image
