@@ -62,7 +62,7 @@ const Navbar = () => {
             </Link>
           ))}
         </nav>
-        <Button asChild className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground">
+        <Button asChild className="hidden md:flex bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm border border-white/30 rounded-full shadow-lg transition-all duration-300 hover:scale-105">
             <Link href="#contact">Hire Me</Link>
         </Button>
       </div>
