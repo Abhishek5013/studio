@@ -33,6 +33,8 @@ const sendMessageFlow = ai.defineFlow(
     outputSchema: SendMessageOutputSchema,
   },
   async (input) => {
+    const recipientEmail = 'abhishekyadav8952@gmail.com';
+
     // In a real application, you would integrate an email sending service here.
     // For example, using a service like Resend, SendGrid, or Nodemailer.
     // For this prototype, we'll just log the message to the console.
@@ -40,12 +42,12 @@ const sendMessageFlow = ai.defineFlow(
     console.log('Name:', input.name);
     console.log('Email:', input.email);
     console.log('Message:', input.message);
-    console.log('Recipient:', 'abhsihekyadav8952@gmail.com');
+    console.log('Recipient:', recipientEmail);
 
     // Here you would add the logic to send the email.
     // For example:
     // await sendEmail({
-    //   to: 'abhsihekyadav8952@gmail.com',
+    //   to: recipientEmail,
     //   from: 'portfolio@example.com',
     //   subject: `New message from ${input.name}`,
     //   html: `<p>Name: ${input.name}</p><p>Email: ${input.email}</p><p>Message: ${input.message}</p>`,
