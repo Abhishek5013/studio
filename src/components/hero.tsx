@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="container px-4 md:px-6 z-10">
             <div className="mb-6 animate-fade-in-down">
               <Image
-                src="https://placehold.co/150x150.png"
+                src="/profile.jpg"
                 alt="Abhishek Yadav"
                 width={150}
                 height={150}
