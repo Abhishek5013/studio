@@ -35,8 +35,6 @@
     --border: 220 13% 85%;
     --input: 220 13% 85%;
     --ring: 224 100% 58%;
-
-    --radius: 0.75rem;
   }
 
   .dark {
@@ -92,7 +90,7 @@
 }
 
 .animated-gradient {
-  background: linear-gradient(-45deg, hsl(var(--background)), #dbe2f4, hsl(var(--background)), #c8d7f5);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }

@@ -45,10 +45,10 @@ const Contact = () => {
     ];
 
     return (
-        <section id="contact" className="w-full py-20 md:py-32 bg-card">
+        <section id="contact" className="w-full py-20 md:py-32 bg-transparent">
             <div className="container mx-auto px-4 md:px-6">
                 <h2 className="text-4xl md:text-5xl font-headline font-bold text-center mb-12">Get In Touch</h2>
-                <div className="max-w-xl mx-auto">
+                <div className="max-w-xl mx-auto bg-card/50 backdrop-blur-sm p-8 rounded-lg">
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                             <FormField

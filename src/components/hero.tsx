@@ -16,7 +16,6 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
-        <div className="absolute inset-0 animated-gradient -z-10"></div>
         <div className="container px-4 md:px-6 z-10">
             <div className="mb-6 animate-fade-in-down">
               <Image
