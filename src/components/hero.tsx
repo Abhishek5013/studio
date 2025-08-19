@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Typewriter from './typewriter';
@@ -34,7 +33,7 @@ const Hero = () => {
                 <Typewriter texts={roles} />
             </div>
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground transition-transform duration-300 hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-                <Link href="#contact">Hire Me</Link>
+                <a href="/resume.pdf" download>Download Resume</a>
             </Button>
         </div>
     </section>
