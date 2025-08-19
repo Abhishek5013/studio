@@ -14,7 +14,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ title, description, imageUrl, aiHint, projectUrl }: ProjectCardProps) => {
     return (
-        <Card className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white/20 backdrop-blur-lg border border-white/30">
+        <Card className="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white/10 backdrop-blur-lg border border-white/20">
             <CardHeader className="p-0">
                 <div className="overflow-hidden">
                     <Image
@@ -32,7 +32,7 @@ const ProjectCard = ({ title, description, imageUrl, aiHint, projectUrl }: Proje
                 <CardDescription>{description}</CardDescription>
             </CardContent>
             <CardFooter className="p-6 pt-0">
-                <Button asChild variant="outline" className="w-full group/button hover:bg-accent hover:text-accent-foreground transition-colors">
+                <Button asChild variant="outline" className="w-full group/button hover:bg-accent hover:text-accent-foreground transition-colors bg-white/20 border-white/30">
                     <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
                         View Project
                         <ArrowUpRight className="ml-2 h-4 w-4 group-hover/button:translate-x-1 group-hover/button:-translate-y-1 transition-transform" />

@@ -20,7 +20,7 @@ const About = () => {
                 <h2 className="text-4xl md:text-5xl font-headline font-bold text-center mb-12">About Me</h2>
                 <div className="grid md:grid-cols-5 gap-12 items-center">
                     <div className="md:col-span-2 flex justify-center">
-                         <Card className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-white/20 backdrop-blur-lg border border-white/30">
+                         <Card className="w-full max-w-sm overflow-hidden rounded-lg shadow-lg bg-white/10 backdrop-blur-lg border border-white/20">
                             <CardContent className="p-0">
                                 <Image
                                     src="https://placehold.co/400x400.png"
@@ -34,10 +34,12 @@ const About = () => {
                         </Card>
                     </div>
                     <div className="md:col-span-3 space-y-6">
-                        <p className="text-lg text-foreground/80 leading-relaxed">
-                            I am a versatile professional with skills in Web Development, Python Programming, 3D Design & Animation, and Software Development. Along with my technical expertise, I possess strong communication and community management skills, which help me effectively collaborate with teams and support customers. My goal is to leverage both my technical knowledge and interpersonal abilities to contribute value in IT as well as customer support roles.
-                        </p>
-                        <div className="space-y-4">
+                        <div className="p-8 rounded-lg bg-white/10 backdrop-blur-lg border border-white/20">
+                            <p className="text-lg text-foreground/80 leading-relaxed">
+                                I am a versatile professional with skills in Web Development, Python Programming, 3D Design & Animation, and Software Development. Along with my technical expertise, I possess strong communication and community management skills, which help me effectively collaborate with teams and support customers. My goal is to leverage both my technical knowledge and interpersonal abilities to contribute value in IT as well as customer support roles.
+                            </p>
+                        </div>
+                        <div className="space-y-4 p-8 rounded-lg bg-white/10 backdrop-blur-lg border border-white/20">
                             {skills.map((skill, index) => (
                                 <SkillProgress key={index} skill={skill.name} level={skill.level} />
                             ))}
