@@ -23,11 +23,11 @@ const Hero = () => {
                 alt="Abhishek Yadav"
                 width={150}
                 height={150}
-                className="rounded-full object-cover mx-auto border-4 border-background/20 shadow-lg"
+                className="rounded-full object-cover mx-auto border-4 border-white/20 shadow-lg"
                 data-ai-hint="man portrait"
               />
             </div>
-            <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-4 text-foreground animate-fade-in-down" style={{animationDelay: '0.2s'}}>
+            <h1 className="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter mb-4 animate-fade-in-down bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-md" style={{animationDelay: '0.2s'}}>
                 Abhishek Yadav
             </h1>
             <div className="text-xl md:text-2xl font-body text-foreground/80 mb-8 animate-fade-in-down" style={{animationDelay: '0.4s'}}>
