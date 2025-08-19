@@ -77,7 +77,7 @@ const Contact = () => {
                                 name="name"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Name</FormLabel>
+                                        <FormLabel className="ml-4">Name</FormLabel>
                                         <FormControl>
                                             <Input placeholder="Your Name" {...field} />
                                         </FormControl>
@@ -90,7 +90,7 @@ const Contact = () => {
                                 name="email"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Email</FormLabel>
+                                        <FormLabel className="ml-4">Email</FormLabel>
                                         <FormControl>
                                             <Input placeholder="your.email@example.com" {...field} />
                                         </FormControl>
@@ -103,7 +103,7 @@ const Contact = () => {
                                 name="message"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Message</FormLabel>
+                                        <FormLabel className="ml-4">Message</FormLabel>
                                         <FormControl>
                                             <Textarea placeholder="Your message here..." rows={5} {...field} />
                                         </FormControl>
@@ -111,7 +111,7 @@ const Contact = () => {
                                     </FormItem>
                                 )}
                             />
-                            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" disabled={isSubmitting}>
+                            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full" disabled={isSubmitting}>
                                 {isSubmitting ? (
                                     <>
                                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
