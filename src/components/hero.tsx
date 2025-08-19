@@ -20,11 +20,12 @@ const Hero = () => {
         <div className="container px-4 md:px-6 z-10">
             <div className="mb-6 animate-fade-in-down">
               <Image
-                src="/profile.jpg"
+                src="https://placehold.co/150x150.png"
                 alt="Abhishek Yadav"
                 width={150}
                 height={150}
                 className="rounded-full object-cover mx-auto border-4 border-background/20 shadow-lg"
+                data-ai-hint="man portrait"
               />
             </div>
             <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-4 text-foreground animate-fade-in-down" style={{animationDelay: '0.2s'}}>
