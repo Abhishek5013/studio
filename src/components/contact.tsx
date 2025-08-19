@@ -35,7 +35,7 @@ const Contact = () => {
         setIsSubmitting(true);
         try {
             const result = await sendMessage(values);
-            if (result.success) {
+            if (result && result.success) {
                 toast({
                     title: "Message Sent!",
                     description: "Thanks for reaching out. I'll get back to you soon.",
