@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Typewriter from './typewriter';
 
@@ -17,6 +18,15 @@ const Hero = () => {
     <section id="home" className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 animated-gradient -z-10"></div>
         <div className="container px-4 md:px-6 z-10">
+            <div className="mb-6 animate-fade-in-down">
+              <Image
+                src="/profile.jpg"
+                alt="Abhishek Yadav"
+                width={150}
+                height={150}
+                className="rounded-full object-cover mx-auto border-4 border-background/20 shadow-lg"
+              />
+            </div>
             <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-4 text-foreground animate-fade-in-down" style={{animationDelay: '0.2s'}}>
                 Abhishek Yadav
             </h1>
