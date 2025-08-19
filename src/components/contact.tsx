@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -9,8 +9,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { sendMessage } from '@/ai/flows/send-message-flow';
 
 const formSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -20,6 +21,7 @@ const formSchema = z.object({
 
 const Contact = () => {
     const { toast } = useToast();
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -29,13 +31,32 @@ const Contact = () => {
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values);
-        toast({
-            title: "Message Sent!",
-            description: "Thanks for reaching out. I'll get back to you soon.",
-        });
-        form.reset();
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        setIsSubmitting(true);
+        try {
+            const result = await sendMessage(values);
+            if (result.success) {
+                toast({
+                    title: "Message Sent!",
+                    description: "Thanks for reaching out. I'll get back to you soon.",
+                });
+                form.reset();
+            } else {
+                 toast({
+                    variant: "destructive",
+                    title: "Uh oh! Something went wrong.",
+                    description: "There was a problem sending your message.",
+                });
+            }
+        } catch (error) {
+             toast({
+                variant: "destructive",
+                title: "Uh oh! Something went wrong.",
+                description: "There was a problem sending your message.",
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     const socialLinks = [
@@ -90,7 +111,16 @@ const Contact = () => {
                                     </FormItem>
                                 )}
                             />
-                            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">Send Message</Button>
+                            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground" disabled={isSubmitting}>
+                                {isSubmitting ? (
+                                    <>
+                                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                        Sending...
+                                    </>
+                                ) : (
+                                    'Send Message'
+                                )}
+                            </Button>
                         </form>
                     </Form>
                     <div className="flex justify-center gap-6 mt-12">
