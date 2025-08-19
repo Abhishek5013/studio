@@ -35,7 +35,7 @@ const About = () => {
                     </div>
                     <div className="md:col-span-3 space-y-6">
                         <p className="text-lg text-foreground/80 leading-relaxed">
-                            Hello! I'm Abhishek Yadav, a passionate Java Full Stack Developer with a knack for building robust and scalable web applications. With a strong foundation in both front-end and back-end technologies, I enjoy bringing ideas to life from concept to deployment. I'm dedicated to writing clean, efficient code and always eager to learn new technologies to enhance my skill set.
+                            I am a versatile professional with skills in Web Development, Python Programming, 3D Design & Animation, and Software Development. Along with my technical expertise, I possess strong communication and community management skills, which help me effectively collaborate with teams and support customers. My goal is to leverage both my technical knowledge and interpersonal abilities to contribute value in IT as well as customer support roles.
                         </p>
                         <div className="space-y-4">
                             {skills.map((skill, index) => (
