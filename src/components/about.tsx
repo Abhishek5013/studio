@@ -34,12 +34,12 @@ const About = () => {
                         </Card>
                     </div>
                     <div className="md:col-span-3 space-y-6">
-                        <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20">
+                        <div className="p-8 rounded-2xl">
                             <p className="text-lg text-foreground/80 leading-relaxed">
                                 I am a versatile professional with skills in Web Development, Python Programming, 3D Design & Animation, and Software Development. Along with my technical expertise, I possess strong communication and community management skills, which help me effectively collaborate with teams and support customers. My goal is to leverage both my technical knowledge and interpersonal abilities to contribute value in IT as well as customer support roles.
                             </p>
                         </div>
-                        <div className="space-y-4 p-8 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20">
+                        <div className="space-y-4 p-8 rounded-2xl">
                             {skills.map((skill, index) => (
                                 <SkillProgress key={index} skill={skill.name} level={skill.level} />
                             ))}
