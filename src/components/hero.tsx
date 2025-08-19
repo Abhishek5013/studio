@@ -32,8 +32,8 @@ const Hero = () => {
             <div className="text-xl md:text-2xl font-body text-foreground/80 mb-8 animate-fade-in-down" style={{animationDelay: '0.4s'}}>
                 <Typewriter texts={roles} />
             </div>
-            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground transition-transform duration-300 hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-                <a href="/resume.pdf" download>Download Resume</a>
+            <Button size="lg" asChild className="rounded-full bg-white/20 backdrop-blur-lg border border-white/30 text-foreground hover:bg-white/30 transition-transform duration-300 hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+                <a href="/resume.pdf" download>Resume</a>
             </Button>
         </div>
     </section>
