@@ -26,7 +26,7 @@ const Hero = () => {
                 data-ai-hint="man portrait"
               />
             </div>
-            <h1 className="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter mb-4 animate-fade-in-down text-foreground drop-shadow-md" style={{animationDelay: '0.2s'}}>
+            <h1 className="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter mb-4 animate-fade-in-down text-foreground drop-shadow-lg" style={{animationDelay: '0.2s'}}>
                 Abhishek Yadav
             </h1>
             <div className="text-xl md:text-2xl font-body text-foreground/80 mb-8 animate-fade-in-down" style={{animationDelay: '0.4s'}}>
