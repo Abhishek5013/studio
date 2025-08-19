@@ -7,13 +7,10 @@ import { Code2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-
       const sections = ['home', 'about', 'projects', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
@@ -42,10 +39,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled ? "bg-card/80 backdrop-blur-sm shadow-md" : "bg-transparent"
-    )}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-lg shadow-lg">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="#home" className="flex items-center gap-2 font-headline text-2xl font-bold">
           <Code2 className="h-8 w-8 text-primary" />
