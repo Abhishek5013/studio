@@ -32,7 +32,7 @@ const ProjectCard = ({ title, description, imageUrl, aiHint, projectUrl }: Proje
                 <CardDescription>{description}</CardDescription>
             </CardContent>
             <CardFooter className="p-6 pt-0">
-                <Button asChild variant="outline" className="w-full group/button hover:bg-accent hover:text-accent-foreground transition-colors bg-white/20 border-white/30 rounded-full">
+                <Button asChild variant="outline" className="w-full group/button hover:bg-accent hover:text-accent-foreground transition-colors bg-white/20 border-white/30 rounded-lg">
                     <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
                         View Project
                         <ArrowUpRight className="ml-2 h-4 w-4 group-hover/button:translate-x-1 group-hover/button:-translate-y-1 transition-transform" />
