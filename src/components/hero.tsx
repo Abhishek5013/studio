@@ -6,6 +6,13 @@ import { Button } from '@/components/ui/button';
 import Typewriter from './typewriter';
 
 const Hero = () => {
+  const roles = [
+    "3D Generalist",
+    "Python Developer",
+    "Web Developer",
+    "Graphics Designer",
+  ];
+
   return (
     <section id="home" className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 animated-gradient -z-10"></div>
@@ -14,7 +21,7 @@ const Hero = () => {
                 Abhishek Yadav
             </h1>
             <div className="text-xl md:text-2xl font-body text-foreground/80 mb-8 animate-fade-in-down" style={{animationDelay: '0.4s'}}>
-                <Typewriter text="Java Full Stack Developer" />
+                <Typewriter texts={roles} />
             </div>
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground transition-transform duration-300 hover:scale-105 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
                 <Link href="#contact">Hire Me</Link>
